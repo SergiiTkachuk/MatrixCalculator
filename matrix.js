@@ -91,6 +91,19 @@ const commands = {
     matrixResult = [];
     arrays = [];
   },
+  multiplicate() {
+    for (let i = 0; i < heigthA; i++) {
+      for (let j = 0; j < widthA; j++) {
+        matrixResult.push(matrixA[i][j] * a);
+      }
+    }
+
+    while (matrixResult.length > 0) arrays.push(matrixResult.splice(0, widthB));
+
+    console.log(arrays);
+    matrixResult = [];
+    arrays = [];
+  },
   exit() {
     rl.close();
   }
