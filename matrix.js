@@ -61,4 +61,19 @@ const commands = {
   printB() {
     console.log(matrixB);
   },
+  sum() {
+    if (heigthA === heigthB && widthA === widthB) {
+      for (let i = 0; i < heigthA; i++) {
+        for (let j = 0; j < widthA; j++) {
+          matrixResult.push(matrixA[i][j] + matrixB[i][j]);
+        }
+      }
+
+      while (matrixResult.length > 0)
+        arrays.push(matrixResult.splice(0, widthB));
+    }
+    console.log(arrays);
+    matrixResult = [];
+    arrays = [];
+  },
 };
