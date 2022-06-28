@@ -117,6 +117,21 @@ const commands = {
     }
     console.log(result);
   },
+  det() {
+    const determinant = (matrix) => {
+      let result = null;
+      if (matrix.length === 1) {
+        result = matrix[0, 0];
+      } else if (matrix.length === 2) {
+        result = matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
+      } else {
+        result = matrix[0].reduce((r, e, i) => r + (-1) ** (i + 2) * e *
+      determinant(matrix.slice(1).map((c) => c.filter((_, j) => i !== j))), 0);
+      }
+      return result;
+    };
+    console.log(determinant(matrixDet));
+  },
   exit() {
     rl.close();
   }
