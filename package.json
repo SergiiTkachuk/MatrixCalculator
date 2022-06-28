@@ -1,0 +1,16 @@
+{
+  "name": "matrixcalculate",
+  "version": "1.0.0",
+  "description": " KPI FICT student from IM-12 group.",
+  "main": "matrix.js",
+  "scripts": {
+    "test": "npm run -s lint",
+    "lint": "eslint . --fix && prettier --write \"**/*.js\" \"**/*.json\""
+  },
+  "author": "Sergii Tkachuk",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^8.17.0",
+    "prettier": "^2.7.1"
+  }
+}
