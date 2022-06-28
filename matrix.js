@@ -104,6 +104,19 @@ const commands = {
     matrixResult = [];
     arrays = [];
   },
+  matrixMultiplicate() {
+    const result = [];
+    if (widthC !== heigthB) console.log('error');
+    for (let i = 0; i < heigthC; i++) result[i] = [];
+    for (let k = 0; k < widthD; k++) {
+      for (let i = 0; i < heigthC; i++) {
+        let t = 0;
+        for (let j = 0; j < heigthD; j++) t += matrixC[i][j] * matrixD[j][k];
+        result[i][k] = t;
+      }
+    }
+    console.log(result);
+  },
   exit() {
     rl.close();
   }
