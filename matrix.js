@@ -37,3 +37,12 @@ const matrixDet = [
   [5, 0, 2],
 ];
 
+const heigthA = matrixA.length;
+const heigthB = matrixB.length;
+const widthA = matrixA[0].length;
+const widthB = matrixB[0].length;
+
+const heigthC = matrixC.length;
+const heigthD = matrixD.length;
+const widthC = matrixC[0].length;
+const widthD = matrixD[0].length;
