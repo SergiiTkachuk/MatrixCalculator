@@ -53,7 +53,7 @@ rl.prompt();
 
 const commands = {
   help() {
-    console.log("Commands:", Object.keys(commands).join(", "));
+    console.log('Commands:', Object.keys(commands).join(', '));
   },
   printA() {
     console.log(matrixA);
@@ -136,3 +136,14 @@ const commands = {
     rl.close();
   }
 };
+
+rl.on('line', (line) => {
+  line = line.trim();
+  const command = commands[line];
+  if (command) command();
+  else console.log('Unknown command');
+  rl.prompt();
+}).on('close', () => {
+  console.log('Bye!');
+  process.exit(0);
+});
