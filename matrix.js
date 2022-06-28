@@ -91,4 +91,7 @@ const commands = {
     matrixResult = [];
     arrays = [];
   },
+  exit() {
+    rl.close();
+  }
 };
