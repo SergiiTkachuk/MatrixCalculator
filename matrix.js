@@ -46,3 +46,19 @@ const heigthC = matrixC.length;
 const heigthD = matrixD.length;
 const widthC = matrixC[0].length;
 const widthD = matrixD[0].length;
+
+let matrixResult = [];
+let arrays = [];
+rl.prompt();
+
+const commands = {
+  help() {
+    console.log("Commands:", Object.keys(commands).join(", "));
+  },
+  printA() {
+    console.log(matrixA);
+  },
+  printB() {
+    console.log(matrixB);
+  },
+};
